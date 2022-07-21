@@ -1,5 +1,6 @@
 HELP.md
 target/
+src/main/java/io/github/ivan100kg/springsecuretoken/student/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
