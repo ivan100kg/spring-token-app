@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
-public class User {
+public class AppUser {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String username;
@@ -15,14 +15,16 @@ public class User {
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<Role> roles = new ArrayList<>();
 
-    public User() {
+    public AppUser() {
     }
 
-    public User(String name, String username, String password) {
+    public AppUser(String name, String username, String password) {
         this.name = name;
         this.username = username;
         this.password = password;
     }
+
+
 
     public Long getId() {
         return id;
